@@ -1,0 +1,65 @@
+/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+running egg_info
+creating ../../build/mujoco_sim/mujoco_sim.egg-info
+writing ../../build/mujoco_sim/mujoco_sim.egg-info/PKG-INFO
+writing dependency_links to ../../build/mujoco_sim/mujoco_sim.egg-info/dependency_links.txt
+writing entry points to ../../build/mujoco_sim/mujoco_sim.egg-info/entry_points.txt
+writing requirements to ../../build/mujoco_sim/mujoco_sim.egg-info/requires.txt
+writing top-level names to ../../build/mujoco_sim/mujoco_sim.egg-info/top_level.txt
+writing manifest file '../../build/mujoco_sim/mujoco_sim.egg-info/SOURCES.txt'
+reading manifest file '../../build/mujoco_sim/mujoco_sim.egg-info/SOURCES.txt'
+writing manifest file '../../build/mujoco_sim/mujoco_sim.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/build/mujoco_sim/build
+creating /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/build/mujoco_sim/build/lib
+creating /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/build/mujoco_sim/build/lib/mujoco_sim
+copying mujoco_sim/mujoco_sim.py -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/build/mujoco_sim/build/lib/mujoco_sim
+copying mujoco_sim/lqr.py -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/build/mujoco_sim/build/lib/mujoco_sim
+copying mujoco_sim/lqr_test.py -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/build/mujoco_sim/build/lib/mujoco_sim
+copying mujoco_sim/__init__.py -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/build/mujoco_sim/build/lib/mujoco_sim
+running install
+running install_lib
+creating /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/lib/python3.10/site-packages/mujoco_sim
+copying /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/build/mujoco_sim/build/lib/mujoco_sim/mujoco_sim.py -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/lib/python3.10/site-packages/mujoco_sim
+copying /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/build/mujoco_sim/build/lib/mujoco_sim/lqr.py -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/lib/python3.10/site-packages/mujoco_sim
+copying /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/build/mujoco_sim/build/lib/mujoco_sim/lqr_test.py -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/lib/python3.10/site-packages/mujoco_sim
+copying /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/build/mujoco_sim/build/lib/mujoco_sim/__init__.py -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/lib/python3.10/site-packages/mujoco_sim
+byte-compiling /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/lib/python3.10/site-packages/mujoco_sim/mujoco_sim.py to mujoco_sim.cpython-310.pyc
+byte-compiling /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/lib/python3.10/site-packages/mujoco_sim/lqr.py to lqr.cpython-310.pyc
+byte-compiling /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/lib/python3.10/site-packages/mujoco_sim/lqr_test.py to lqr_test.cpython-310.pyc
+byte-compiling /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/lib/python3.10/site-packages/mujoco_sim/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/ament_index
+creating /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/ament_index/resource_index
+creating /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/ament_index/resource_index/packages
+copying resource/mujoco_sim -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/ament_index/resource_index/packages
+copying package.xml -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim
+creating /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/urdf
+copying urdf/rm1_4.urdf -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/urdf
+copying urdf/rm1_4.csv -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/urdf
+creating /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/mjcf
+copying mjcf/rm1_4.xml -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/mjcf
+creating /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/meshes
+copying meshes/Link1_wheel.STL -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/meshes
+copying meshes/Link4_1_1.STL -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/meshes
+copying meshes/Link2_1.STL -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/meshes
+copying meshes/Link4_wheel.STL -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/meshes
+copying meshes/Link2.STL -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/meshes
+copying meshes/Link4.STL -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/meshes
+copying meshes/Link4_1.STL -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/meshes
+copying meshes/Link1_1.STL -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/meshes
+copying meshes/Link3_1.STL -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/meshes
+copying meshes/Link3.STL -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/meshes
+copying meshes/Link1_1_1.STL -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/meshes
+copying meshes/Link1.STL -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/meshes
+copying meshes/base_link1.STL -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/meshes
+copying meshes/base_link.STL -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/meshes
+creating /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/launch
+copying launch/sim.launch.py -> /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/share/mujoco_sim/launch
+running install_egg_info
+Copying ../../build/mujoco_sim/mujoco_sim.egg-info to /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/lib/python3.10/site-packages/mujoco_sim-0.0.0-py3.10.egg-info
+running install_scripts
+Installing mujoco_sim_node script to /home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/install/mujoco_sim/lib/mujoco_sim
+writing list of installed files to '/home/czx/mujoco_learn/wheel_/wheelLqr_ws_v2_LQR/build/mujoco_sim/install.log'

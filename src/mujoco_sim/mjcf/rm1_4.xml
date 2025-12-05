@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="rm1_4">
+  <compiler angle="radian" meshdir="../meshes"/>
+  <option timestep="0.001" gravity="0 0 -9.81" />
+
+  <asset>
+    <mesh name= "base_link" file="base_link.STL"/>
+    <mesh name= "Link1" file="Link1.STL"/>
+    <mesh name= "Link1_1" file="Link1_1.STL"/>
+    <mesh name= "Link1_1_1" file="Link1_1_1.STL"/>
+    <mesh name= "Link1_wheel" file="Link1_wheel.STL"/>
+    <mesh name= "Link2" file="Link2.STL"/>
+    <mesh name= "Link2_1" file="Link2_1.STL"/>
+    <mesh name= "Link3" file="Link3.STL"/>
+    <mesh name= "Link3_1" file="Link3_1.STL"/>
+    <mesh name= "Link4" file="Link4.STL"/>
+    <mesh name= "Link4_1" file="Link4_1.STL"/>
+    <mesh name= "Link4_1_1" file="Link4_1_1.STL"/>
+    <mesh name= "Link4_wheel" file="Link4_wheel.STL"/>
+  </asset>
+
+  <worldbody>
+    <!-- <geom name="x_axis_line" type="capsule" pos="0 0 0" size="0.005 0.2" rgba="1 0 0 1" euler="0 0 0"/> -->
+    <light name="sun_light" pos="0 0 5" dir="0 0 -1"
+            diffuse="1 1 1" specular="0.3 0.3 0.3" ambient="0.3 0.3 0.3"
+            directional="true"/>
+    <geom name="ground" type="plane" pos="0 0 0" size="10 10 1" rgba="0.2 0.3 0.4 1"/>
+      
+      <body name="base_link" pos="0 0 0.3">
+        <site name="imu_site" pos="0 0 0" size="0.01" rgba="1 0 0 1" type="sphere"/>
+        <joint type="free"/>
+        <inertial pos="-0.000892772281032661 -0.000386027788803766 0.0911675878160826"
+                  mass="8.22086883787417"
+                  diaginertia="0.0101752103464764 0.0208524458300362 0.0229915329558513"/>
+        <geom type="mesh" mesh="base_link" name="base_visual" contype="1" conaffinity="1"/>
+
+        <!-- Link1 chain -->
+        <body name="Link1_mount" pos="0.075 0.1458 0.116">
+          <joint name="Joint1" type="hinge" axis="0 1 0" damping="0.001" limited="true" range="-0.4000000000000001 -0.4"/>
+          <body name="Link1" pos="0 0 0">
+            <inertial mass="0.364093838667338" pos="0.0796972594990132 0.0113863935021989 -0.0592039298594968" diaginertia="0.000292444214292895 0.000711500800317931 0.000437635673749851"/>
+            <geom type="mesh" mesh="Link1" name="Link1_visual" contype="1"/>
+
+            <body name="Link1_1_mount" pos="0.12049 0.02625 -0.08934">
+              <joint name="Joint1_1" type="hinge" axis="0 1 0" damping="0.001" range="-3.14 3.14"/>
+              <body name="Link1_1" pos="0 0 0">
+                <inertial mass="0.31619" pos="-0.090148 -0.0305 -0.07876" diaginertia="0.001298 0.002904 0.0016194"/>
+                <geom type="mesh" mesh="Link1_1" name="Link1_1_visual" contype="1"/>
+
+                <body name="Link1_1_1_mount" pos="-0.20244 0.04955 -0.17866">
+                  
+                  <body name="Link1_1_1" pos="0 0 0">
+                    <inertial mass="0.38445" pos="5.2409E-05 -0.063932 -6.5766E-05" diaginertia="9.747E-05 0.00013529 9.7611E-05"/>
+                    <geom type="mesh" mesh="Link1_1_1" name="Link1_1_1_visual" contype="1"/>
+
+                    <body name="Link1_wheel_mount" pos="0 0 0">
+                      <joint name="Joint1_wheel" type="hinge" axis="0 1 0" damping="0.001" />
+                      <body name="Link1_wheel" pos="0 0 0">
+                        <inertial mass="0.350527" pos="0 -0.0136243896280868 0" diaginertia="0.000545267 0.001043532 0.000545267"/>
+                        <geom type="mesh" mesh="Link1_wheel" name="Link1_wheel_visual" contype="1"/>
+                      </body>
+                    </body>
+
+                  </body>
+                </body>
+
+              </body>
+            </body>
+
+          </body>
+        </body>
+
+        <!-- Link2 chain -->
+        <body name="Link2_mount" pos="-0.075 0.1423 0.116">
+          <joint name="Joint2" type="hinge" axis="0 1 0" damping="0.001" limited="true" range="0.4 0.4000000000000001"/>
+          <body name="Link2" pos="0 0 0">
+            <inertial mass="0.31916" pos="-0.0938934972745664 0.0107921320054443 -0.0599317711416569" diaginertia="0.000245173618732527 0.000681305807790174 0.000454591454431056"/>
+            <geom type="mesh" mesh="Link2" name="Link2_visual" contype="1"/>
+
+            <body name="Link2_1_mount" pos="-0.12643 -0.00275 -0.080714">
+              <joint name="Joint2_1" type="hinge" axis="0 1 0" damping="0.001" range="-3.14 3.14"/>
+              <body name="Link2_1" pos="0 0 0">
+                <inertial mass="0.362769366826742" pos="0.0888144796611295 0.0304999999999944 -0.0849096310540993" diaginertia="0.0016268422541624 0.00332952872547524 0.00171816463096412"/>
+                <geom type="mesh" mesh="Link2_1" name="Link2_1_visual" contype="1"/>
+              </body>
+            </body>
+
+          </body>
+        </body>
+
+        <!-- Link3 chain -->
+        <body name="Link3_mount" pos="-0.075 -0.1423 0.116">
+          <joint name="Joint3" type="hinge" axis="0 1 0" damping="0.001" limited="true" range="0.4 0.4000000000000001"/>
+          <body name="Link3" pos="0 0 0">
+            <inertial mass="0.319160456889777" pos="-0.0938848466020199 -0.0107921320054425 -0.0599453628936306" diaginertia="0.000246525264350726 0.000681305807790174 0.000453239808812857"/>
+            <geom type="mesh" mesh="Link3" name="Link3_visual" contype="1"/>
+
+            <body name="Link3_1_mount" pos="-0.12643 0.00275 -0.080714">
+              <joint name="Joint3_1" type="hinge" axis="0 1 0" damping="0.001" range="-3.14 3.14"/>
+              <body name="Link3_1" pos="0 0 0">
+                <site name="link3_1_attach" pos=" 0.1944 -0.0305 -0.18728" size="0.01" rgba="1 0 0 1" type="sphere"/>
+                <inertial mass="0.362769366826742" pos="0.0881992328413841 -0.0305 -0.0855485392593422" diaginertia="0.0016037398658573 0.00332952872547524 0.00174126701926921"/>
+                <geom type="mesh" mesh="Link3_1" name="Link3_1_visual" contype="1"/>
+              </body>
+            </body>
+
+          </body>
+        </body>
+
+        <!-- Link4 chain -->
+        <body name="Link4_mount" pos="0.075 -0.1423 0.116">
+          <joint name="Joint4" type="hinge" axis="0 1 0" damping="0.001"   range="-0.4000000000000001 -0.4"/>
+          <body name="Link4" pos="0 0 0">
+            <inertial mass="0.36409" pos="0.088062 -0.014886 -0.045846" diaginertia="0.00022253 0.0007115 0.00050755"/>
+            <geom type="mesh" mesh="Link4" name="Link4_visual" contype="1"/>
+
+            <body name="Link4_1_mount" pos="0.12049 -0.02975 -0.08934">
+              <joint name="Joint4_1" type="hinge" axis="0 1 0" damping="0.001" range="-3.14 3.14"/>
+              <body name="Link4_1" pos="0 0 0">
+                <inertial mass="0.316188691129829" pos="-0.090147993571541 0.0305 -0.0787595260203655" diaginertia="0.0012980447927671 0.00290397940736062 0.00161942533208173"/>
+                <geom type="mesh" mesh="Link4_1" name="Link4_1_visual" contype="1"/>
+
+                <body name="Link4_1_1_mount" pos="-0.20244 -0.04955 -0.17866">
+                  <body name="Link4_1_1" pos="0 0 0">
+                    <site name="link4_1_1_attach" pos="0 0.0515 0" size="0.01" rgba="0 1 0 1" type="sphere"/>
+                    <inertial mass="0.37921801318209" pos="6.85661482628126E-05 0.0635510419744176 -5.06517622370084E-05" diaginertia="9.71670720974106E-05 0.000134317263554592 9.6934131915369E-05"/>
+                    <geom type="mesh" mesh="Link4_1_1" name="Link4_1_1_visual" contype="1"/>
+
+                    <body name="Link4_wheel_mount" pos="0 0 0">
+                      <joint name="Joint4_wheel" type="hinge" axis="0 1 0" damping="0.001" />
+                      <site name="axis_center" pos="0 0 0" size="0.01" rgba="1 0 0 1" type="sphere"/>
+                      <body name="Link4_wheel" pos="0 0 0">
+                        <inertial mass="0.350527091202425" pos="-5.52509427098613E-16 0.0136243896280863 0" diaginertia="0.00054526709279272 0.00104353211018634 0.00054526709279272"/>
+                        <geom type="mesh" mesh="Link4_wheel" name="Link4_wheel_visual" contype="1"/>
+                      </body>
+                    </body>
+
+                  </body>
+                </body>
+              </body>
+
+            </body>
+          </body>
+        </body>
+
+
+  
+    </body>
+    
+
+
+  </worldbody>
+
+
+
+  <sensor>
+    <gyro site="imu_site" name="gyro"/>
+    <velocimeter site="imu_site" name="vel"/>
+  </sensor>
+
+  <equality> 
+
+    <weld body1="Link3_1" body2="Link4_1_1" />
+    <weld body1="Link2_1" body2="Link1_1_1" />
+    <!-- anchor="-0.006946 -0.17005 -0.15199" -->
+    
+  </equality>
+
+  <actuator>
+
+  <motor joint="Joint3" ctrllimited="true" ctrlrange="-40 40" gear="1"/>
+  <motor joint="Joint4" ctrllimited="true" ctrlrange="-40 40" gear="1"/>
+  <motor joint="Joint4_wheel" ctrllimited="true" ctrlrange="-40 40" gear="1"/>
+  <motor joint="Joint1_wheel" ctrllimited="true" ctrlrange="-40 40" gear="1"/>  
+
+  </actuator>
+
+</mujoco>
