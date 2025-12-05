@@ -1,3 +1,0 @@
-[console_scripts]
-mujoco_sim_node = mujoco_sim.mujoco_sim:main
-
